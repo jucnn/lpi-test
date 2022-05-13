@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav class="navbar">
+      <div class="navbar-menu is-active">
+        <div class="navbar-start">
+          <router-link class="navbar-item" to="/">Home</router-link>
+          <router-link class="navbar-item" to="/users">Users</router-link>
+        </div>
+      </div>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -23,10 +27,6 @@ nav {
   a {
     font-weight: bold;
     color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
 }
 </style>
