@@ -2,7 +2,7 @@
   <div class="users">
     <h1 class="title">All users</h1>
     <div class="container">
-      <button class="button is-info" @click="isModalOpen = true">
+      <button class="button is-info" @click="openAddUser()">
         Add a user
       </button>
       <table class="table is-hoverable is-bordered mt-4 is-fullwidth">
@@ -107,6 +107,11 @@ export default {
       //open the modal in edit mode
       this.userToEdit = user;
       this.isEditMode = true,
+      this.isModalOpen = true;
+    },
+     openAddUser() {
+      //open the modal in edit mode
+      this.isEditMode = false,
       this.isModalOpen = true;
     },
   },
